@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./assets/stylesheet/css/banniere.css">
+</head>
+  <body>
+    <h1>Bannière JS (Methode commercial pour proposer une promo ou une possibilité d'inscription)</h1>
+     <div class="brief">
+      <p>
+        Vous développez un  site marchand.
+        <br>1/ Faites apparaitre une bannière (proposition d'inscription à la newsletter) 5 secondes après le chargement de la page.
+        <br>2/ Cette bannière doit être fixer en bas de page.
+        <br>3/ Placez un bouton en haut à droite de la bannière pour fermer celle-ci.
+        <br>(voir bannière.html)
+      </p>
+    </div>
+    <footer>
+      <div style="display: flex;justify-content: flex-end;font-size: 60px;margin: 0;">
+        <p id="close" style="margin: 0;">&timesb;</p>
+      </div>
+      <h2 style="margin: 20px; margin-top: 0;">inscriver vous a la newsletter</h2>
+      <div>
+        
+        <form style="margin: 20px;">
+          <input type="email" placeholder="email">
+          <button type="submit">s'inscrire</button>
+        </form>
+      </div>
+    </footer>
+    <script>
+      //TODO
+      const alerkana = document.querySelector("footer")
+      const closebitton = document.querySelector("#close")
+      closebitton.addEventListener("click", () => {
+        alerkana.style.display = "none"
+      })
+      setTimeout(() => {
+        alerkana.style.display = "block"
+      }, 5000);
+    </script>
+  </body>
+</html>

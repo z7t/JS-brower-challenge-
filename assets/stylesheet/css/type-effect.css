@@ -1,0 +1,16 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 100px; 
+    text-align: center; 
+    margin-top: 300px; 
+    color: gray;
+}
+
+h2{
+    margin-top: 50px; 
+    text-align: center; 
+    color: gray;
+}

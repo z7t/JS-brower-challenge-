@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./assets/stylesheet/css/valid-form.css">
+</head>
+  <body>
+    <h1 style="margin-top: 300px; text-align: center;">Formulaire et validation</h1>
+    <div class="banner">
+      <p>Codez une fonction qui assure la sécurité d'une connexion via ce formulaire.</p>
+      <p>Le prénom doit faire moins de 15 caractères et le mot de passe doit faire 8 caractères minimum </p>
+      <p>Si l'une de ces deux conditions n'est pas remplis, un message d'erreur doit s'afficher par le biais de la div 'error-message'. Dans le cas contraire affichez un message de succès. </p>
+      <p>Une checkbox permettra de voir le password en toute lettre.</p>
+      <p>Challenge supplémentaire : lorsque l'on commence à entrer une chaine de caractère dans le formulaire 'password', celui-ci prend des contours (border...) rouge. Puis passe au vert dès lors que l'on rentre 8 caractères ou plus.<br>(voir valid-form.html)</p>
+    </div>
+    <form id="valid-form">
+      <input class="default-border" id="login" type="text" label="login" placeholder="Login">
+      <input class="default-border" id="pwd" type="password" label="pwd" placeholder="Mot de passe">
+      <input class="default-border" id="button" type="submit" value="Submit" style="height: 37px;">
+    </form>
+    <p class="watchPwd"><input type="checkbox" id="checkbox" name="checkbox">Voir le mot de passe.</p>
+    <div id="error-message"></div>
+    <script>
+      //TODO
+    </script>
+  </body>
+</html>

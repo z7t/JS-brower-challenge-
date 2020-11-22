@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Type effect</title>
+    <link rel="stylesheet" href="./assets/stylesheet/css/type-effect.css">
+  </head>
+  <body>
+    <h2>Faire apparaitre le mots de votre choix lettre par lettre dans la balise 'h1' (voir code...)
+    <br>(voir type-effect.html)
+    </h2>
+    <h1 id="maintext"></h1>
+  <script>
+    const ouioui = document.getElementById("maintext")
+    const temp_afficache = 500
+    let lelo = new Text()
+    const titre_text = "mathias777";
+    function anime(){
+        for (let i = 0, d = 100; i < titre_text.length; i++, d += 100){
+            setTimeout(() => {
+                lelo.appendData(titre_text[i])
+                ouioui.innerText = lelo.textContent
+            }, d);
+        }
+    }
+    anime()
+  </script>
+  </body>
+</html>

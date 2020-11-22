@@ -1,0 +1,55 @@
+body{
+  background-color: white; 
+  color: gray; 
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  margin-top: 300px; 
+  text-align: center;
+}
+
+.banner p{
+  text-align: center;
+}
+
+#valid-form{
+  text-align: center;
+};
+
+.watchPwd{
+  text-align: center;
+}
+
+input #button:hover{
+  cursor: pointer;
+}
+
+#valid-form input {
+  text-align: center;
+  font-size: 15px;
+  height: 30px;
+  border-radius: 20px;
+  transition: 1s;
+  width: 20%;
+}
+
+.default-border{
+  border: 2px solid gray;
+}
+
+
+/*--------------------*/
+
+.good-password{
+  border: 2px solid green;
+}
+
+.bad-password{
+  border: 2px solid red;
+}
+
+.error-message{
+  text-align: center; 
+  color: red;
+}

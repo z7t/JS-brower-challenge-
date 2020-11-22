@@ -1,0 +1,21 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    margin-top: 150px; 
+    text-align: center; 
+    color: gray;
+}
+
+.brief{
+    text-align: center;
+}
+
+#imageBloc{
+    text-align: center;
+}
+
+.paramoteur li, .multiaxe li{
+    display: inline-block;
+}
