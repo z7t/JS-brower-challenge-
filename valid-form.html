@@ -17,10 +17,41 @@
       <input class="default-border" id="pwd" type="password" label="pwd" placeholder="Mot de passe">
       <input class="default-border" id="button" type="submit" value="Submit" style="height: 37px;">
     </form>
-    <p class="watchPwd"><input type="checkbox" id="checkbox" name="checkbox">Voir le mot de passe.</p>
-    <div id="error-message"></div>
+    <p class="watchPwd"><input type="checkbox" id="checkbox" name="checkbox">Voir le mot de passe</p>
+    <div class="error-message">
+      <p style="color:red">Le prénom doit faire moins de 15 caractères et le mot de passe doit faire 8 caractères minimum</p>
+    </div>
+    <div class="succsess-message">
+      <p style="color:green">bienve :)</p>
+    </div>
     <script>
-      //TODO
+      let showpass = false
+      const formu = document.getElementById("valid-form");
+      const errormsg = document.querySelector(".error-message")
+      const showpassword = document.querySelector("#checkbox");
+      const inputpassword = document.querySelector("#pwd");
+      const inputusername = document.querySelector("#login");
+      const sucsessmsg = document.querySelector(".succsess-message")
+      showpassword.addEventListener("input", () => {
+        if (showpass == true){
+          showpass = false;
+          inputpassword.attributes.type.value = "password";
+        }else{
+          inputpassword.attributes.type.value = "text";
+          showpass = true;
+        }
+      })
+      formu.addEventListener("submit", (event) => {
+        event.preventDefault()
+        if (inputpassword.value.length > 8 && inputusername.value.length < 15){
+          errormsg.style.display = "none"
+          sucsessmsg.style.display = "block"
+          console.log("c pari!")
+        }else{
+          errormsg.style.display = "block"
+          sucsessmsg.style.display = "none"
+        }
+      })
     </script>
   </body>
 </html>

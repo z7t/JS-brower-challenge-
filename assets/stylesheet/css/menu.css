@@ -30,7 +30,7 @@ ul li{
   display: inline-block;
 }
 
-.fixed-position{
+.fixedposition{
   position: fixed;
   top: 0;
   left: 0;

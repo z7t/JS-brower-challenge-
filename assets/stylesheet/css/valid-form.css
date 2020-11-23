@@ -50,6 +50,12 @@ input #button:hover{
 }
 
 .error-message{
+  display: none;
   text-align: center; 
   color: red;
+}
+.succsess-message{
+  display: none;
+  text-align: center; 
+  color: green;
 }
