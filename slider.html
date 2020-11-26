@@ -9,9 +9,24 @@
   <h1>Vous trouverez dans le dossier '/assets/images/slider', 4 photos. Codez un slider
   <br>(voir slider.html)
   </h1>
-  <img id="slide" width="400" height="300">
+  <img id="slide" src="" width="400" height="300">
   <script>
-    //TODO
+    const ima = ["assets/images/slider/ulm1.jpg", "assets/images/slider/ulm2.jpg", "assets/images/slider/ulm3.jpg"];
+    let imaindex = 0 //l'index du tableau d'url des images (le tableau est just eau dessus)
+    const carousel = document.getElementById("slide"); //le carousel 
+    const refeshima = (() => {
+      setTimeout(() => {
+        carousel.attributes.src.value = ima[imaindex] //replacer les image avec les image dans le tableau ima ligne 14
+        if (imaindex > (ima.length - 2)){
+          imaindex = 0 //reinitialiser la position du carouse (raméne a la premiere image)
+        }else{
+          imaindex++ //sinon incrementer la valeur de 1
+        }
+        // console.log(imaindex) 
+        refeshima()
+      }, 3000); //executer ce block toute les 3 seconde
+    });
+    refeshima() //lancement de la fonction, au demmarage de la page
   </script>
 </body>
 </html>
