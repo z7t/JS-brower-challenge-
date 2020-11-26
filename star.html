@@ -22,20 +22,21 @@
   </div>
   <div class="test"></div>
   <script>
-    const starselect = document.querySelectorAll(".fas");
+    const starselect = document.querySelectorAll(".fas"); //selection de toutes les etoile <i>
     const setStar = ((idre) => {
-      starselect.forEach((etoi) => {
-          etoi.classList.remove("star-checked")
+
+      starselect.forEach((etoi) => { 
+          etoi.classList.remove("star-checked") //mettre toute les etoiles en gris
       })
       for(let ididi = idre; ididi != 0; ididi--){
-        starselect[ididi - 1].classList.add("star-checked")
+        starselect[ididi - 1].classList.add("star-checked") //ajouter du jaune sur l'indexe de l'etoile selectioner
+        //et faire une boucle pour que les precedente devienne jaune aussi
       }
     })
 
-    starselect.forEach((cela) => {
+    starselect.forEach((cela) => { //creeer un listeneur pour toutes les etoile selection a la ligne 25
       cela.addEventListener("click", () => {
-        console.log(cela.attributes.getNamedItem("value").value)
-        setStar(cela.attributes.getNamedItem("value").value)
+        setStar(cela.attributes.getNamedItem("value").value) //appel de la fonction pour midifier la couleur des etoile avec l'ID de letoile cliquer
       })
     })
   </script>
