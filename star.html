@@ -13,16 +13,31 @@
     </h1>
 
     <ul id="list-of-stars">
-      <li><i class="fas fa-star"></i></li>
-      <li><i class="fas fa-star"></i></li>
-      <li><i class="fas fa-star"></i></li>
-      <li><i class="fas fa-star"></i></li>
-      <li><i class="fas fa-star"></i></li>
+      <li><i value="1" class="fas fa-star"></i></li>
+      <li><i value="2" class="fas fa-star"></i></li>
+      <li><i value="3" class="fas fa-star"></i></li>
+      <li><i value="4" class="fas fa-star"></i></li>
+      <li><i value="5" class="fas fa-star"></i></li>
     </ul>
   </div>
   <div class="test"></div>
   <script>
-    //TODO
+    const starselect = document.querySelectorAll(".fas");
+    const setStar = ((idre) => {
+      starselect.forEach((etoi) => {
+          etoi.classList.remove("star-checked")
+      })
+      for(let ididi = idre; ididi != 0; ididi--){
+        starselect[ididi - 1].classList.add("star-checked")
+      }
+    })
+
+    starselect.forEach((cela) => {
+      cela.addEventListener("click", () => {
+        console.log(cela.attributes.getNamedItem("value").value)
+        setStar(cela.attributes.getNamedItem("value").value)
+      })
+    })
   </script>
 </body>
 </html>
